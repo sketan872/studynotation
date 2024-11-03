@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import GuessTheNumber from "./components/adminPage"
 function App() {
 const [isloginIn,SetIsloggedIn]=useState(false);
 
@@ -21,10 +22,9 @@ const [isloginIn,SetIsloggedIn]=useState(false);
 <Route path="/login" element={<Login SetIsloggedIn={SetIsloggedIn}/>} />
 <Route path="/signup" element={<Signup SetIsloggedIn={SetIsloggedIn}/>}/>
 <Route path="/Contact" element={<Contact/>}/>
+<Route pth="game1" element={<GuessTheNumber/>}/>
 <Route path="/dashboard" element={
- <PrivateRoute>
 <Dashboard/>
- </PrivateRoute>
 }/>
 
 
