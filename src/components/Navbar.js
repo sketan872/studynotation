@@ -1,7 +1,9 @@
 import React from 'react';
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.svg';
+import logo from '../assets/schoollogo1.png';
+
+
 const Navbar = (props) => {
     const isloginIn=props.isloginIn;
     const SetIsloggedIn=props.SetIsloggedIn;
@@ -12,9 +14,11 @@ const Navbar = (props) => {
       <Link to='/'><img src={logo} width={50} height={32} loading='lazy' alt='students'/></Link>
     <nav>
         <ul className='flex gap-x-6 text-white'>
-<li><Link to='/'>Home</Link></li>
-<li><Link to='/'>About</Link></li>
-<li><Link to='/'>Contact</Link></li>
+<li className='hover:bg-blue-800 rounded-full p-2'><Link to='/'>Home</Link></li>
+<li className='hover:bg-blue-800 rounded-full p-2'><Link to='/About'>About</Link></li>
+<li className='hover:bg-blue-800 rounded-full p-2'><Link to='/Contact'>Contact</Link></li>
+<li className='hover:bg-blue-800 rounded-full p-2'><Link to='/Activity'>Activity</Link></li>
+<li className='hover:bg-blue-800 rounded-full p-2'><Link to='/Admissions'>Admissions</Link></li>       
         </ul>
     </nav>
 <div className='flex items-center gap-x-4'>

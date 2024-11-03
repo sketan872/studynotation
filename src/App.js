@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import PrivateRoute from './components/PrivateRoute';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -11,18 +13,18 @@ function App() {
 const [isloginIn,SetIsloggedIn]=useState(false);
 
   return (
-    <div className="w-[1263px] h-[850px] bg-[#0f172a] flex flex-col">
+    <div className="w-[1263px] h-[800px] bg-[#0f172a] flex flex-col">
       <Navbar isloginIn={isloginIn} SetIsloggedIn={SetIsloggedIn}/>
       <Routes>
 <Route path="/" element={<Home isloginIn={isloginIn}/>} />
+<Route path="/About" element={<About isloginIn={isloginIn}/> }/>
 <Route path="/login" element={<Login SetIsloggedIn={SetIsloggedIn}/>} />
 <Route path="/signup" element={<Signup SetIsloggedIn={SetIsloggedIn}/>}/>
-<Route path="/dashboard" element=
-
-{
+<Route path="/Contact" element={<Contact/>}/>
+<Route path="/dashboard" element={
  <PrivateRoute>
 <Dashboard/>
- </PrivateRoute> 
+ </PrivateRoute>
 }/>
 
 

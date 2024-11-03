@@ -33,7 +33,7 @@ console.log(accountData);
 navigate("/dashboard")
 }
   return (
-    <div className='h-[450px]'>
+    <div className='h-full'>
       <div className='flex bg-green-50 p-1 gap-x-1 my-6 rounded-full max-w-max'>
         <button className={`${accounttype==="student"?"bg-[#0f172a] text-white":"bg-slate-500 text-slate-200 transition-all duration-1" } py-2 px-5 rounded-full transition-all duration-200`} onClick={()=>{
           Setaccounttype("student");

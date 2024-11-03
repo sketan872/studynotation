@@ -24,7 +24,7 @@ function SubmitHandler(event)
     event.preventDefault();
     SetIsloggedIn(true);
     toast.success("Logged Success");
-navigate("/dashboard    ")
+navigate("/dashboard")
 }
 
 
